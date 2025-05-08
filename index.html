@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Para la niña que amo</title>
   <style>
     body {
@@ -26,30 +26,37 @@
       justify-content: center;
       gap: 20px;
       max-width: 500px;
+      list-style: none;
+      padding: 0;
     }
 
-    .menu-item {
+    .menu li {
       background-color: #f8d5e3;
       border-radius: 50%;
-      width: 100px;
-      height: 100px;
+      width: 120px;
+      height: 120px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
       box-shadow: 0 4px 6px rgba(0,0,0,0.1);
       transition: transform 0.3s ease;
-      text-decoration: none;
-      color: #a0456b;
     }
 
-    .menu-item:hover {
+    .menu li:hover {
       transform: scale(1.1);
       background-color: #ffd1e8;
     }
 
-    .icon {
-      font-size: 30px;
+    .menu a {
+      text-decoration: none;
+      color: #a0456b;
+      font-size: 14px;
+    }
+
+    .menu img {
+      width: 50px;
+      height: 50px;
       margin-bottom: 5px;
     }
 
@@ -59,23 +66,21 @@
       font-size: 1rem;
     }
   </style>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
 </head>
 <body>
   <h1>💖 Para la niña que amo 💖</h1>
-  <!-- Menú con íconos (ramo de rosas) -->
-  <div class="menu">
-    <ul>
-      <li><a href="carta.html"><img src="rosas/rosa1.png" alt="Flor 1"> Carta</a></li>
-      <li><a href="recuerdos.html"><img src="rosas/rosa1.png" alt="Flor 2"> Recuerdos</a></li>
-      <li><a href="fotos.html"><img src="rosas/rosa1.png" alt="Flor 3"> Fotos</a></li>
-      <li><a href="mensajes.html"><img src="rosas/rosa1.png" alt="Flor 4"> Mensajes</a></li>
-      <li><a href="futuro.html"><img src="rosas/rosa1.png" alt="Flor 5"> Nuestro Futuro</a></li>
-      <li><a href="sorpresa.html"><img src="rosas/rosa1.png" alt="Flor 6"> Sorpresa</a></li>
-    </ul>
-  </div>
+
+  <ul class="menu">
+    <li><a href="carta.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rose_icon.svg" alt="Flor 1">Carta</a></li>
+    <li><a href="recuerdos.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rose_icon.svg" alt="Flor 2">Recuerdos</a></li>
+    <li><a href="fotos.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rose_icon.svg" alt="Flor 3">Fotos</a></li>
+    <li><a href="mensajes.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rose_icon.svg" alt="Flor 4">Mensajes</a></li>
+    <li><a href="futuro.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rose_icon.svg" alt="Flor 5">Nuestro Futuro</a></li>
+    <li><a href="sorpresa.html"><img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/Rose_icon.svg" alt="Flor 6">Sorpresa</a></li>
+  </ul>
+
   <footer>
-    🌹 Hecho con amor por tu futuro esposo🌹
+    🌹 Hecho con amor por tu futuro esposo 🌹
   </footer>
 </body>
 </html>
