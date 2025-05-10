@@ -66,17 +66,31 @@
     /* Imágenes decorativas */
     .decoracion {
       position: absolute;
-      width: 80px;
+      width: 200px; /* Aumenté el tamaño */
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       border: 4px solid white;
+      animation: float 5s ease-in-out infinite; /* Animación flotante */
     }
 
     .decoracion.izq-arriba { top: 20px; left: 20px; }
     .decoracion.der-arriba { top: 20px; right: 20px; }
     .decoracion.izq-abajo { bottom: 20px; left: 20px; }
     .decoracion.der-abajo { bottom: 20px; right: 20px; }
+
+    /* Animación flotante */
+    @keyframes float {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
   </style>
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -94,7 +108,7 @@
     <a class="menu-item" href="sorpresa.html"><img src="rosas/rosa2.png" alt="Flor 6">Sorpresa</a>
   </div>
 
-  <!-- Imágenes decorativas (tú las puedes reemplazar con las de ella) -->
+  <!-- Imágenes decorativas -->
   <img src="fotos/foto1.jpeg" alt="Foto decorativa 1" class="decoracion izq-arriba" />
   <img src="fotos/foto4.jpeg" alt="Foto decorativa 2" class="decoracion der-arriba" />
   <img src="fotos/foto2.jpeg" alt="Foto decorativa 3" class="decoracion izq-abajo" />
