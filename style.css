@@ -1,11 +1,15 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #fffafc;
+  background: url('fondos/fondo-rosado.jpg') no-repeat center center fixed;
+  background-size: cover;
   color: #b22222;
   margin: 0;
   padding: 0;
+  position: relative;
+  overflow-x: hidden;
 }
 
+/* Contenedor del menú en forma de ramo */
 .ramo-container {
   position: relative;
   width: 300px;
@@ -13,6 +17,7 @@ body {
   margin: 50px auto;
 }
 
+/* Estilo de cada rosa / botón */
 .rosa {
   position: absolute;
   width: 70px;
@@ -48,3 +53,23 @@ body {
 .rosa:nth-child(4) { top: 80%; left: 40%; }
 .rosa:nth-child(5) { top: 60%; left: 0%; }
 .rosa:nth-child(6) { top: 20%; left: 0%; }
+
+/* FOTOS DECORATIVAS (suaves y flotando) */
+.decoracion {
+  position: absolute;
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border: 4px solid white;
+  transition: transform 1.5s ease-in-out, opacity 1.5s ease;
+  animation: flotar 6s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Animación suave */
+@keyframes flotar {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
