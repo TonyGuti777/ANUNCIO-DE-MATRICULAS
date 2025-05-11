@@ -4,13 +4,22 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Para la niña que amo</title>
+
+  <!-- Precarga de imágenes decorativas -->
+  <link rel="preload" as="image" href="foto/footo1.jpeg">
+  <link rel="preload" as="image" href="foto/footo2.jpeg">
+  <link rel="preload" as="image" href="foto/footo3.jpeg">
+  <link rel="preload" as="image" href="foto/footo4.jpeg">
+
+  <!-- Precarga de música -->
+  <link rel="preload" as="audio" href="musica.mp3" type="audio/mpeg">
+
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: url('https://www.transparenttextures.com/patterns/flower-power.png'), #f5d0d6;
-      background-repeat: repeat;
-      background-attachment: fixed;
+      background: url('fondo-floral.jpg') no-repeat center center fixed;
+      background-size: cover;
       font-family: 'Comic Sans MS', cursive;
       text-align: center;
       position: relative;
@@ -64,7 +73,6 @@
       font-size: 1rem;
     }
 
-    /* Imágenes decorativas */
     .decoracion {
       position: absolute;
       width: 200px;
@@ -84,6 +92,10 @@
       0% { transform: translateY(0); }
       50% { transform: translateY(-15px); }
       100% { transform: translateY(0); }
+    }
+
+    audio {
+      display: none;
     }
   </style>
 
@@ -105,6 +117,12 @@
   <img src="foto/footo4.jpeg" alt="Foto decorativa 2" class="decoracion der-arriba" />
   <img src="foto/footo2.jpeg" alt="Foto decorativa 3" class="decoracion izq-abajo" />
   <img src="foto/footo3.jpeg" alt="Foto decorativa 4" class="decoracion der-abajo" />
+
+  <!-- Música de fondo -->
+  <audio autoplay loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Tu navegador no soporta audio HTML5.
+  </audio>
 
   <footer>
     🌹 Hecho con amor por tu futuro esposo 🌹
