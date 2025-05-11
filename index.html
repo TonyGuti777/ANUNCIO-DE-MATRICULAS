@@ -8,8 +8,9 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('fondo-floral.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: url('https://www.transparenttextures.com/patterns/flower-power.png'), #f5d0d6;
+      background-repeat: repeat;
+      background-attachment: fixed;
       font-family: 'Comic Sans MS', cursive;
       text-align: center;
       position: relative;
@@ -66,12 +67,12 @@
     /* Imágenes decorativas */
     .decoracion {
       position: absolute;
-      width: 200px; /* Aumenté el tamaño */
+      width: 200px;
       height: auto;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       border: 4px solid white;
-      animation: float 5s ease-in-out infinite; /* Animación flotante */
+      animation: float 5s ease-in-out infinite;
     }
 
     .decoracion.izq-arriba { top: 20px; left: 20px; }
@@ -79,17 +80,10 @@
     .decoracion.izq-abajo { bottom: 20px; left: 20px; }
     .decoracion.der-abajo { bottom: 20px; right: 20px; }
 
-    /* Animación flotante */
     @keyframes float {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-15px);
-      }
-      100% {
-        transform: translateY(0);
-      }
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0); }
     }
   </style>
 
@@ -98,7 +92,6 @@
 <body>
   <h1>💖 Para la niña que amo 💖</h1>
 
-  <!-- Menú de secciones -->
   <div class="menu">
     <a class="menu-item" href="carta.html"><img src="rosas/rosa1.png" alt="Flor 1">Carta</a>
     <a class="menu-item" href="recuerdos.html"><img src="rosas/rosa2.png" alt="Flor 2">Recuerdos</a>
@@ -108,7 +101,6 @@
     <a class="menu-item" href="sorpresa.html"><img src="rosas/rosa2.png" alt="Flor 6">Sorpresa</a>
   </div>
 
-  <!-- Imágenes decorativas -->
   <img src="foto/footo1.jpeg" alt="Foto decorativa 1" class="decoracion izq-arriba" />
   <img src="foto/footo4.jpeg" alt="Foto decorativa 2" class="decoracion der-arriba" />
   <img src="foto/footo2.jpeg" alt="Foto decorativa 3" class="decoracion izq-abajo" />
