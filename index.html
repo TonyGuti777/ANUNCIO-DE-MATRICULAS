@@ -38,7 +38,7 @@
   <h1>💖 Para la niña que amo 💖</h1>
 
   <!-- Menú de secciones en dos filas -->
- <style>
+  <style>
     body {
       margin: 0;
       padding: 0;
@@ -98,7 +98,22 @@
       font-size: 1rem;
     }
 
-   /* Imágenes decorativas */
+    /* Estilos para los corazones */
+    .heart {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: #ff6ec7;
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+      animation: caerCorazon 5s infinite;
+    }
+
+    @keyframes caerCorazon {
+      0% { top: -10px; opacity: 1; }
+      100% { top: 100vh; opacity: 0; }
+    }
+
+    /* Imágenes decorativas */
     .decoracion {
       position: absolute;
       width: 200px;
@@ -121,10 +136,6 @@
     }
   </style>
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-</head>
-<body>
-
   <div class="menu">
     <a class="menu-item" href="carta.html"><img src="rosas/rosa1.png" alt="Flor 1">Carta</a>
     <a class="menu-item" href="recuerdos.html"><img src="rosas/rosa2.png" alt="Flor 2">Recuerdos</a>
@@ -143,3 +154,4 @@
     🌹 Hecho con amor por tu futuro esposo 🌹
   </footer>
 </body>
+</html>
