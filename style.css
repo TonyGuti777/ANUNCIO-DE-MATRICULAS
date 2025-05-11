@@ -4,7 +4,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #f1b0ff; /* palo de rosa suave */
+  background-color: #f1c7fa; /* palo de rosa suave */
   font-family: 'Segoe UI', sans-serif;
   color: #5e4b56;
   overflow-x: hidden;
@@ -110,48 +110,46 @@ footer {
   color: #c97c9d;
 }
 
-/* Corazones cayendo */
+/* Corazones cayendo bonitos */
 .heart {
   position: fixed;
   top: -50px;
-  width: 30px;
-  height: 30px;
-  background-color: #ff6b81;
-  animation: fall linear infinite;
-  opacity: 0.8;
-  z-index: 0;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
   transform: rotate(45deg);
-  left: calc(100% * random());
+  animation: fall linear infinite;
+  z-index: 2;
 }
 
-/* Forma de corazón utilizando antes y después */
 .heart::before,
 .heart::after {
   content: '';
   position: absolute;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   background-color: #ff6b81;
   border-radius: 50%;
 }
 
-/* Lóbulos de corazón */
 .heart::before {
-  top: -15px;
+  top: -10px;
   left: 0;
 }
 
 .heart::after {
   top: 0;
-  left: -15px;
+  left: -10px;
 }
 
-/* Animación para la caída */
+/* Animación de caída */
 @keyframes fall {
   0% {
     transform: translateY(0) rotate(45deg);
+    opacity: 1;
   }
   100% {
     transform: translateY(100vh) rotate(45deg);
+    opacity: 0;
   }
 }
