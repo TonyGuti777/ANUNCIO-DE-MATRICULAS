@@ -18,7 +18,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url('https://www.transparenttextures.com/patterns/flower-power.png');
+  background-image: url('https://www.transparenttextures.com/patterns/flowers.png'); /* Nueva textura floral */
   background-repeat: repeat;
   opacity: 0.1;
   z-index: -1;
@@ -108,4 +108,11 @@ footer {
   margin-top: 60px;
   font-size: 1rem;
   color: #c97c9d;
+}
+
+/* Optimización de imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
