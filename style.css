@@ -8,10 +8,10 @@ body {
   color: #5e4b56;
   overflow-x: hidden;
   overflow-y: auto;
-  background-image: url('https://www.transparenttextures.com/patterns/flowers.png');
+  background-image: url('https://www.transparenttextures.com/patterns/flowers.png');  /* Aquí va tu URL */
   background-repeat: repeat;
   background-attachment: fixed;
-  background-size: auto;
+  background-size: auto; /* Esto asegura que la imagen no se distorsione */
 }
 
 /* Título romántico */
@@ -41,7 +41,7 @@ h1 {
 }
 
 .menu-item img {
-  width: 120px;  /* Aumenté el tamaño de los iconos */
+  width: 120px;
   height: 120px;
   margin-bottom: 10px;
 }
@@ -61,7 +61,7 @@ h1 {
 /* Estilo de cada rosa/botón */
 .rosa {
   position: absolute;
-  width: 100px;  /* Aumento el tamaño de las rosas */
+  width: 100px;
   height: 100px;
   background-color: #fff0f5;
   border-radius: 50%;
@@ -98,7 +98,7 @@ h1 {
 /* FOTOS DECORATIVAS flotantes y más grandes */
 .decoracion {
   position: absolute;
-  width: 180px;  /* Hice las fotos más grandes */
+  width: 180px;
   height: auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
