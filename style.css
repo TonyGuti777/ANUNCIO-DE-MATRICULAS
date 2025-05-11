@@ -124,6 +124,7 @@ footer {
   left: calc(100% * random());
 }
 
+/* Forma de corazón utilizando antes y después */
 .heart::before,
 .heart::after {
   content: '';
@@ -134,6 +135,7 @@ footer {
   border-radius: 50%;
 }
 
+/* Lóbulos de corazón */
 .heart::before {
   top: -15px;
   left: 0;
