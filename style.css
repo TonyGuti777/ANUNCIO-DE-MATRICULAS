@@ -111,15 +111,17 @@ footer {
 }
 
 /* Corazones cayendo correctamente */
-heart {
+.heart {
   position: fixed;
   top: -50px;
   width: 20px;
   height: 20px;
-  background-color: transparent;
+  background-color: #ff6b81;
   transform: rotate(45deg);
   animation: fall linear infinite;
-  z-index: 2;
+  opacity: 0.8;
+  z-index: 0;
+  border-radius: 0;
 }
 
 .heart::before,
@@ -133,33 +135,20 @@ heart {
 }
 
 .heart::before {
-  top: 0;
+  top: -10px;
   left: 0;
 }
 
 .heart::after {
   top: 0;
-  left: 0;
-  transform: translateX(-50%);
-}
-
-.heart {
-  background-color: #ff6b81;
-  border-radius: 50% 50% 0 0;
+  left: -10px;
 }
 
 @keyframes fall {
   0% {
     transform: translateY(0) rotate(45deg);
-    opacity: 1;
   }
   100% {
     transform: translateY(100vh) rotate(45deg);
-    opacity: 0;
-  }
-}
-  100% {
-    transform: translateY(100vh) rotate(45deg);
-    opacity: 0;
   }
 }
