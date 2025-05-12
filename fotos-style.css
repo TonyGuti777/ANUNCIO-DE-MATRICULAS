@@ -1,0 +1,36 @@
+/* Estilos para la sección de fotos */
+#fotos {
+  text-align: center;
+  margin: 60px auto;
+  max-width: 1200px;
+}
+
+#fotos h2 {
+  font-size: 2.5rem;
+  color: #b22222;
+  margin-bottom: 40px;
+}
+
+/* Contenedor del collage */
+.collage {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Autoajustable para varias fotos */
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Estilo de cada foto */
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el cursor sobre las fotos */
+.foto img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
