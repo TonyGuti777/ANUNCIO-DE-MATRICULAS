@@ -3,18 +3,25 @@
   text-align: center;
   margin: 60px auto;
   max-width: 1200px;
+  background-color: #f5d0d6; /* Fondo palo de rosa suave */
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/* Título de la sección */
 #fotos h2 {
   font-size: 2.5rem;
   color: #b22222;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Contenedor del collage */
+/* Contenedor del collage de fotos */
 .collage {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Autoajustable para varias fotos */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Para que las fotos se ajusten automáticamente */
   gap: 20px;
   justify-items: center;
 }
@@ -24,8 +31,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
