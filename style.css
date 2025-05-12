@@ -110,16 +110,17 @@ footer {
   color: #c97c9d;
 }
 
-/* Corazones cayendo bonitos */
+/* Corazones cayendo correctamente */
 .heart {
   position: fixed;
   top: -50px;
   width: 20px;
   height: 20px;
-  background-color: transparent;
+  background-color: #ff6b81;
   transform: rotate(45deg);
   animation: fall linear infinite;
   z-index: 2;
+  border-radius: 0 0 50% 50%;
 }
 
 .heart::before,
