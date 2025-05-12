@@ -16,27 +16,70 @@
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+  
+  /* Estilos para corazones */
+    .heart {
+      position: fixed;
+      top: -50px;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6b81;
+      transform: rotate(45deg);
+      animation: fall linear infinite;
+      opacity: 0.8;
+      z-index: 0;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: #ff6b81;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(0) rotate(45deg);
+      }
+      100% {
+        transform: translateY(100vh) rotate(45deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  
   <!-- Música de fondo -->
   <audio autoplay loop hidden>
     <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
     Tu navegador no soporta el elemento de audio.
   </audio>
 
-  <!-- Contenedor de corazones -->
+ <!-- Contenedor de corazones -->
   <script>
-  function crearCorazon() {
-    const heart = document.createElement('div');
-    heart.classList.add('heart');
-    heart.style.left = Math.random() * 100 + 'vw';
-    heart.style.animationDuration = 3 + Math.random() * 2 + 's';
-    document.body.appendChild(heart);
-    setTimeout(() => heart.remove(), 5000);
-  }
-  setInterval(crearCorazon, 300);
-</script>
-
-  <h1>💖 Para la niña que amo 💖</h1>
-  <body>
+    function crearCorazon() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(crearCorazon, 300);
+  </script>
 
   <!-- Menú de secciones en dos filas -->
   <style>
