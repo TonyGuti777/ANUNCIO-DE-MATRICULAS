@@ -1,0 +1,61 @@
+/* Fondo y estilo general del cuerpo */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5d0d6; /* Color palo de rosa suave */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Contenedor principal de la carta */
+.carta-contenedor {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 0 30px rgba(255, 105, 180, 0.4);
+  text-align: center;
+  background-image: url('https://www.transparenttextures.com/patterns/flower-power.png');
+  background-size: cover;
+}
+
+/* Estilo del título */
+.carta-contenedor h1 {
+  color: #b22222;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  font-family: 'Brush Script MT', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Cuerpo de la carta */
+.carta-cuerpo {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #5e4b56;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Estilo del botón de regreso */
+.boton-regreso {
+  margin-top: 20px;
+}
+
+.boton-regreso a {
+  font-size: 1.2rem;
+  color: #fff;
+  background-color: #b22222;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.boton-regreso a:hover {
+  background-color: #800000;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
