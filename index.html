@@ -23,6 +23,19 @@
     Tu navegador no soporta el elemento de audio.
   </audio>
 
+   function crearCorazon() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = 3 + Math.random() * 2 + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(crearCorazon, 300);
+  </script>
+</body>
+</html>
+
  <!-- Contenedor de corazones -->
  <script>
   function crearCorazon() {
