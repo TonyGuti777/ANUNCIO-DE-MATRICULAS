@@ -24,7 +24,7 @@
   </audio>
 
  <!-- Contenedor de corazones -->
-  <script>
+ <script>
   function crearCorazon() {
     const heart = document.createElement('div');
     heart.classList.add('heart');
@@ -33,7 +33,6 @@
     document.body.appendChild(heart);
     setTimeout(() => heart.remove(), 5000);
   }
-
   setInterval(crearCorazon, 300);
 </script>
 
