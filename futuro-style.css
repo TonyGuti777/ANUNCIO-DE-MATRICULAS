@@ -104,3 +104,48 @@ body {
     height: auto;
   }
 }
+
+/* caja-suenos.css */
+
+.caja-suenos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.sueno {
+  width: 250px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: #fff;
+  transition: transform 0.2s;
+}
+
+.sueno:hover {
+  transform: scale(1.03);
+}
+
+.sueno img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.texto-sueno {
+  display: none;
+  padding: 10px;
+  font-size: 15px;
+  color: #444;
+  border-top: 1px solid #eee;
+  background-color: #f9f9f9;
+}
+
+.sueno.activo .texto-sueno {
+  display: block;
+}
