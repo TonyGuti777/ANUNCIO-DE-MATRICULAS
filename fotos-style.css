@@ -1,43 +1,72 @@
-/* Estilos para la sección de fotos */
-#fotos {
-  text-align: center;
-  margin: 60px auto;
+/* === FOTOS.CSS === */
+
+/* Fondo romántico general */
+body {
+  background: url('img/fondo-fotos.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #fff;
+}
+
+/* Contenedor principal */
+.fotos-container {
+  padding: 60px 20px;
   max-width: 1200px;
-  background-color: #f5d0d6; /* Fondo palo de rosa suave */
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* Título de la sección */
-#fotos h2 {
+/* Título animado */
+.fotos-title {
   font-size: 2.5rem;
-  color: #b22222;
-  margin-bottom: 30px;
-  font-weight: bold;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 40px;
+  animation: latido 1.5s infinite;
+  color: #ffc0cb;
+  text-shadow: 2px 2px 5px #00000080;
 }
 
-/* Contenedor del collage de fotos */
-.collage {
+/* Galería de imágenes */
+.gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Para que las fotos se ajusten automáticamente */
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px;
-  justify-items: center;
+  padding: 10px;
 }
 
-/* Estilo de cada foto */
-.foto img {
+/* Estilo para cada foto */
+.gallery img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto al pasar el cursor sobre las fotos */
-.foto img:hover {
+/* Efecto hover */
+.gallery img:hover {
   transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 25px rgba(255, 105, 180, 0.8);
+  cursor: pointer;
+}
+
+/* Animación de latido */
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Responsive para móviles */
+@media screen and (max-width: 600px) {
+  .fotos-title {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
 }
