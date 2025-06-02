@@ -1,13 +1,79 @@
-<!-- futuro.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Carta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Caja de Sueños</title>
+  <link rel="stylesheet" href="futuro-style.css" />
 </head>
 <body>
-  <h1>Mi cartita para ti 💌</h1>
-  <p>Aquí irá un mensaje lindo que estoy escribiendo con todo mi corazón...</p>
-  <a href="index.html">Volver</a>
+
+  <h1 class="caja-title">Caja de Sueños ✨📦</h1>
+
+  <div class="caja-container">
+
+    <div class="cajita">
+      Mi primer viaje juntos
+      <div class="mensaje">Sueño con que viajemos a la playa y veamos el atardecer juntos.</div>
+    </div>
+
+    <div class="cajita">
+      Nuestra casita ideal
+      <div class="mensaje">Quiero que construyamos un hogar lleno de amor y risas.</div>
+    </div>
+
+    <div class="cajita">
+      Mascota peluda
+      <div class="mensaje">Deseo que tengamos un perrito o gatito que nos acompañe en todo.</div>
+    </div>
+
+    <div class="cajita">
+      Aventuras sin fin
+      <div class="mensaje">Que sigamos descubriendo lugares y creando recuerdos inolvidables.</div>
+    </div>
+
+    <div class="cajita">
+      Noche de películas
+      <div class="mensaje">Tener tardes de pelis, palomitas y abrazos interminables.</div>
+    </div>
+
+    <div class="cajita">
+      Cumpleaños sorpresa
+      <div class="mensaje">Organizar cumpleaños llenos de sorpresas y mucho amor.</div>
+    </div>
+
+    <div class="cajita">
+      Cocina juntos
+      <div class="mensaje">Preparar recetas nuevas y reírnos mientras cocinamos juntos.</div>
+    </div>
+
+    <div class="cajita">
+      Bailes improvisados
+      <div class="mensaje">Bailar en la sala sin importar el ritmo ni la perfección.</div>
+    </div>
+
+    <div class="cajita">
+      Viaje de aniversario
+      <div class="mensaje">Celebrar nuestro aniversario en un lugar especial y romántico.</div>
+    </div>
+
+    <div class="cajita">
+      Más sueños contigo
+      <div class="mensaje">Seguir soñando juntos y construir nuestra historia día a día.</div>
+    </div>
+
+  </div>
+
+  <script>
+    // JS para abrir/cerrar cajitas
+    const cajitas = document.querySelectorAll('.cajita');
+
+    cajitas.forEach(cajita => {
+      cajita.addEventListener('click', () => {
+        cajita.classList.toggle('open');
+      });
+    });
+  </script>
+
 </body>
 </html>
