@@ -1,60 +1,112 @@
+/* === MENSAJES.CSS === */
+
 body {
-  font-family: 'Quicksand', sans-serif;
   margin: 0;
-  padding: 0;
-  background-color: #f5d0d6;
-  color: #5e4b56;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('../img/fondo-mensajes.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background: url('fondo-mensajes.jpg') no-repeat center center fixed;
-  background-size: cover;
+  padding: 60px 20px;
 }
 
-h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  color: #b22222;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  text-align: center;
+/* Título */
+.mensajes-title {
+  font-size: 2.5rem;
+  color: #ffb6c1;
+  text-shadow: 2px 2px 6px #000;
+  margin-bottom: 40px;
+  animation: latido 1.5s infinite;
 }
 
-.messages-container {
+/* Contenedor de tarjetas */
+.mensajes-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
-  padding: 20px;
-  max-width: 1000px;
-  width: 90%;
+  width: 100%;
+  max-width: 1200px;
 }
 
-.message {
-  background-color: rgba(255, 255, 255, 0.85);
+/* Tarjeta general */
+.card {
+  perspective: 1000px;
+  cursor: pointer;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Lado frontal */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  text-align: center;
-  transition: transform 0.3s, box-shadow 0.3s;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6);
 }
 
-.message:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-.message p {
-  font-size: 1.1rem;
-  color: #800000;
-  margin: 0;
-}
-
-.message span {
-  display: block;
-  margin-top: 10px;
+.card-front {
+  background: #ffc0cb;
+  color: #000;
+  font-weight: bold;
   font-size: 1.2rem;
-  font-family: 'Poiret One', sans-serif;
+}
+
+/* Lado trasero (mensaje) */
+.card-back {
+  background: #fff0f5;
   color: #b22222;
+  transform: rotateY(180deg);
+  padding: 20px;
+  font-size: 1rem;
+  text-align: center;
+  position: relative;
+}
+
+/* Corazoncito decorativo */
+.card-back::after {
+  content: "❤️";
+  position: absolute;
+  bottom: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  animation: latido 1.2s infinite;
+}
+
+/* Animación de latido */
+@keyframes latido {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .mensajes-title {
+    font-size: 2rem;
+  }
+
+  .card {
+    height: 180px;
+  }
 }
