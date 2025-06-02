@@ -1,13 +1,27 @@
-<!-- sorpresa.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Carta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sorpresa Especial</title>
+  <link rel="stylesheet" href="caja-sorpresa.css" />
 </head>
 <body>
-  <h1>Mi cartita para ti 💌</h1>
-  <p>Aquí irá un mensaje lindo que estoy escribiendo con todo mi corazón...</p>
-  <a href="index.html">Volver</a>
+
+  <h1>Tu Sorpresa 🎶❤️</h1>
+
+  <button id="btnPlay">Reproducir Sorpresa</button>
+
+  <div id="letras"></div>
+
+  <div id="mensajeInteractivo" style="display:none;">
+    <textarea placeholder="Escribe aquí tu mensaje para mí..."></textarea>
+    <button id="btnGuardar">Guardar Mensaje</button>
+    <div id="mensajeGuardado" style="display:none;"></div>
+  </div>
+
+  <audio id="audio" src="tu-audio.mp3"></audio>
+
+  <script src="caja-sorpresa.js"></script>
 </body>
 </html>
